@@ -29,16 +29,6 @@ At **WebEngage** I build the mobile SDKs and plugins that product teams integrat
 
 Outside work I build developer tools and offline-first apps. Lately I've been working on **AI agents and LLM integration**.
 
-```kotlin
-object Milind : Engineer {
-    override val role       = "Senior Software Engineer @ WebEngage"
-    override val experience = 8.years                     // since 2018
-    override val platforms  = listOf("Android", "iOS", "Flutter",
-                                     "React Native", "Cordova", "Capacitor", "Unity")
-    override val focus      = listOf("Mobile SDKs", "Cross-platform plugins",
-                                     "Developer tools", "AI agents")
-}
-```
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-stack-mobile.svg" />
