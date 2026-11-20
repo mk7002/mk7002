@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="380" viewBox="0 0 720 380" fill="none" role="img">
+<title>250 Contributions · 50 Active days · 5d Longest streak · 1d Current streak</title>
+<style>
+  .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace; }
+</style>
+<defs><linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#A78BFA"/><stop offset="0.45" stop-color="#7C3AED"/><stop offset="1" stop-color="#38BDF8"/>
+  </linearGradient></defs>
+<rect x="1" y="1" width="718" height="378" rx="18" fill="#171B2B" stroke="#262B3D" stroke-width="1.5"/>
+<text x="36" y="46" class="mono" font-size="18" fill="#38BDF8" letter-spacing="1.5">LAST 12 MONTHS</text>
+<text x="684" y="46" text-anchor="end" class="mono" font-size="16" fill="#6B7280">updated 2026-11-20</text>
+<text x="180.0" y="155.6" text-anchor="middle" class="sans" font-size="54" font-weight="800" fill="url(#accent)">250</text><text x="180.0" y="189.6" text-anchor="middle" class="mono" font-size="17" fill="#9CA3AF" letter-spacing="1">CONTRIBUTIONS</text><text x="540.0" y="155.6" text-anchor="middle" class="sans" font-size="54" font-weight="800" fill="url(#accent)">50</text><text x="540.0" y="189.6" text-anchor="middle" class="mono" font-size="17" fill="#9CA3AF" letter-spacing="1">ACTIVE DAYS</text><text x="180.0" y="310.6" text-anchor="middle" class="sans" font-size="54" font-weight="800" fill="url(#accent)">5d</text><text x="180.0" y="344.6" text-anchor="middle" class="mono" font-size="17" fill="#9CA3AF" letter-spacing="1">LONGEST STREAK</text><text x="540.0" y="310.6" text-anchor="middle" class="sans" font-size="54" font-weight="800" fill="url(#accent)">1d</text><text x="540.0" y="344.6" text-anchor="middle" class="mono" font-size="17" fill="#9CA3AF" letter-spacing="1">CURRENT STREAK</text>
+</svg>

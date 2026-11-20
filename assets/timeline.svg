@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="230" viewBox="0 0 1280 230" fill="none" role="img">
+<title>Experience timeline: Inspeero Technologies, Android Developer, Apr 2018 – Jan 2021; Image Online, Android Developer, Jan 2021 – Aug 2022; WebEngage, Senior Software Engineer, Aug 2022 – present</title>
+<style>
+  .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace; }
+</style>
+<defs><linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#A78BFA"/><stop offset="0.45" stop-color="#7C3AED"/><stop offset="1" stop-color="#38BDF8"/>
+  </linearGradient></defs>
+<rect x="1" y="1" width="1278" height="228" rx="16" fill="#0B0D12" stroke="#262B3D" stroke-width="1.5"/>
+<rect x="80" y="118" width="1120" height="4" rx="2" fill="#171B2B"/>
+<line x1="80.0" y1="112" x2="80.0" y2="128" stroke="#262B3D"/><text x="80.0" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2018</text>
+<line x1="204.44444444444446" y1="112" x2="204.44444444444446" y2="128" stroke="#262B3D"/><text x="204.44444444444446" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2019</text>
+<line x1="328.8888888888889" y1="112" x2="328.8888888888889" y2="128" stroke="#262B3D"/><text x="328.8888888888889" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2020</text>
+<line x1="453.3333333333333" y1="112" x2="453.3333333333333" y2="128" stroke="#262B3D"/><text x="453.3333333333333" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2021</text>
+<line x1="577.7777777777778" y1="112" x2="577.7777777777778" y2="128" stroke="#262B3D"/><text x="577.7777777777778" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2022</text>
+<line x1="702.2222222222223" y1="112" x2="702.2222222222223" y2="128" stroke="#262B3D"/><text x="702.2222222222223" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2023</text>
+<line x1="826.6666666666666" y1="112" x2="826.6666666666666" y2="128" stroke="#262B3D"/><text x="826.6666666666666" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2024</text>
+<line x1="951.1111111111111" y1="112" x2="951.1111111111111" y2="128" stroke="#262B3D"/><text x="951.1111111111111" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2025</text>
+<line x1="1075.5555555555557" y1="112" x2="1075.5555555555557" y2="128" stroke="#262B3D"/><text x="1075.5555555555557" y="152" text-anchor="middle" class="mono" font-size="14" fill="#6B7280">2026</text>
+<rect x="113.11111111111111" y="116" width="338.2222222222222" height="8" rx="4" fill="#6B7280"/>
+<circle cx="113.11111111111111" cy="120" r="6" fill="#0B0D12" stroke="#6B7280" stroke-width="2.5"/>
+<text x="282.22222222222223" y="70" text-anchor="middle" class="sans" font-size="23" font-weight="700" fill="#E5E7EB">Inspeero Technologies</text><text x="282.22222222222223" y="98" text-anchor="middle" class="sans" font-size="17" fill="#9CA3AF">Android Developer</text><text x="282.22222222222223" y="188" text-anchor="middle" class="mono" font-size="15" fill="#6B7280">Apr 2018 – Jan 2021</text>
+<rect x="455.3333333333333" y="116" width="195.11111111109977" height="8" rx="4" fill="#A78BFA"/>
+<circle cx="455.3333333333333" cy="120" r="6" fill="#0B0D12" stroke="#A78BFA" stroke-width="2.5"/>
+<text x="552.8888888888832" y="70" text-anchor="middle" class="sans" font-size="23" font-weight="700" fill="#E5E7EB">Image Online</text><text x="552.8888888888832" y="98" text-anchor="middle" class="sans" font-size="17" fill="#9CA3AF">Android Developer</text><text x="552.8888888888832" y="188" text-anchor="middle" class="mono" font-size="15" fill="#A78BFA">Jan 2021 – Aug 2022</text>
+<rect x="654.4444444444331" y="116" width="531.1111111111339" height="8" rx="4" fill="url(#accent)"/>
+<circle cx="654.4444444444331" cy="120" r="6" fill="#0B0D12" stroke="#38BDF8" stroke-width="2.5"/>
+<text x="920.0" y="70" text-anchor="middle" class="sans" font-size="23" font-weight="700" fill="#E5E7EB">WebEngage</text><text x="920.0" y="98" text-anchor="middle" class="sans" font-size="17" fill="#9CA3AF">Senior Software Engineer</text><text x="920.0" y="188" text-anchor="middle" class="mono" font-size="15" fill="#38BDF8">Aug 2022 – present</text>
+<circle cx="1187.555555555567" cy="120" r="7" fill="#38BDF8"><animate attributeName="r" values="6;9;6" dur="2.4s" repeatCount="indefinite"/></circle>
+</svg>

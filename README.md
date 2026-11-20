@@ -1,76 +1,125 @@
-<p align="center">
-  <img src="assets/header.svg" width="100%" alt="Milind Keni: Senior Software Engineer, Mobile. Mobile SDKs, cross-platform plugins and on-device ML." />
-</p>
+<!-- Assets are generated: scripts/build_assets.py (static) and scripts/update_stats.py (daily, via GitHub Actions). -->
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/hero-mobile.svg" />
+  <img src="assets/hero.svg" width="100%" alt="Milind Keni: Senior Software Engineer at WebEngage. Mobile and cross-platform engineering: building mobile SDKs, developer tools and AI agents." />
+</picture>
 
 <p align="center">
-  <a href="https://milindev.com/"><img src="https://img.shields.io/badge/milindev.com-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Website" /></a>
-  <a href="https://www.linkedin.com/in/milindkeni"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=A78BFA" alt="LinkedIn" /></a>
-  <a href="https://x.com/Mtweet7002"><img src="https://img.shields.io/badge/@Mtweet7002-0D1117?style=for-the-badge&logo=x&logoColor=E6EDF3" alt="X" /></a>
+  <a href="https://www.linkedin.com/in/milindkeni">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://github.com/MilindWebEngage">Work GitHub</a> &nbsp;·&nbsp;
+  Mumbai, India
 </p>
 
-<p align="center">
-  <img src="assets/metrics.svg" width="100%" alt="6+ years shipping mobile · 280+ SDK commits at WebEngage · 120K+ Play Store installs · 24+ production apps shipped" />
-</p>
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/metrics-mobile.svg" />
+  <img src="assets/metrics.svg" width="100%" alt="8+ years in software · 280+ public SDK commits · 120K+ Play Store installs · 24+ production apps" />
+</picture>
 
-<br>
+<br><br>
 
-<img src="assets/section-about.svg" width="100%" alt="01 About" />
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-intro-mobile.svg" />
+  <img src="assets/section-intro.svg" width="100%" alt="01 Introduction" />
+</picture>
+
+I'm a senior software engineer with **8+ years** of experience, almost all of it in mobile: native Android and iOS, and the cross-platform layers built on top of them.
+
+At **WebEngage** I build the mobile SDKs and plugins that product teams integrate into their apps: Flutter, React Native, Expo, Cordova, Capacitor and Unity bridges on top of the native Android and iOS SDKs, plus the iOS push-notification extensions. I also build developer tools for testing and debugging those integrations. Before that I spent four years shipping Android apps for clients across OTT, health, IoT, social and enterprise.
+
+Outside work I build developer tools and offline-first apps. Lately I've been working on **AI agents and LLM integration**.
 
 ```kotlin
 object Milind : Engineer {
     override val role       = "Senior Software Engineer @ WebEngage"
-    override val base       = "Mumbai, India"
-    override val experience = 6.years                                   // since 2018
-    override val platforms  = listOf("Android", "iOS", "Flutter", "React Native", "Cordova/Ionic", "Unity")
-    override val specialty  = "SDKs, plugins & libraries: the layer other developers build on"
-    override val sideQuests = "offline-first apps: no accounts, no tracking, often no INTERNET permission"
-    override val currently  = listOf("on-device ML (ML Kit, LiteRT)", "AI-assisted developer tools")
+    override val experience = 8.years                     // since 2018
+    override val platforms  = listOf("Android", "iOS", "Flutter",
+                                     "React Native", "Cordova", "Capacitor", "Unity")
+    override val focus      = listOf("Mobile SDKs", "Cross-platform plugins",
+                                     "Developer tools", "AI agents")
 }
 ```
 
-<img src="assets/section-stack.svg" width="100%" alt="02 Stack" />
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-stack-mobile.svg" />
+  <img src="assets/section-stack.svg" width="100%" alt="02 Technology stack" />
+</picture>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=kotlin,java,androidstudio,swift,apple,flutter,dart,react,unity,ts,js,nodejs,electron,php,firebase,git&theme=dark&perline=16" alt="Kotlin, Java, Android Studio, Swift, Apple, Flutter, Dart, React, Unity, TypeScript, JavaScript, Node.js, Electron, PHP, Firebase, Git" />
+  <img src="https://skillicons.dev/icons?i=kotlin,java,androidstudio,swift,flutter,dart,react,ts,js,nodejs,firebase,gradle,electron,php,mysql,git&theme=dark&perline=8" width="560" alt="Kotlin, Java, Android Studio, Swift, Flutter, Dart, React Native, TypeScript, JavaScript, Node.js, Firebase, Gradle, Electron, PHP, MySQL, Git" />
 </p>
 
-| Layer | Tools |
+| Layer | Technologies |
 |---|---|
-| **Android** | `Kotlin` `Jetpack Compose` `Coroutines` `Room` `AccessibilityService` `ML Kit` `LiteRT` |
-| **iOS** | `Swift` `Objective-C` `SPM` `CocoaPods` `APNs` `Notification Service & Content extensions` |
-| **Cross-platform** | `Flutter` `React Native` `Expo` `Ionic` `Cordova` `Capacitor` `Unity` |
-| **Backend & tooling** | `Node.js` `PHP` `Electron` `Firebase` `Gradle` `CI/CD` |
+| **Android** | `Kotlin` `Java` `Jetpack Compose` `Coroutines` `Room` `ML Kit` `LiteRT` |
+| **iOS** | `Swift` `Objective-C` `Swift Package Manager` `CocoaPods` `Notification Service / Content extensions` |
+| **Cross-platform** | `Flutter` `Dart` `React Native` `Expo` `Cordova` `Ionic` `Capacitor` `Unity` |
+| **Messaging & cloud** | `Firebase` `FCM` `APNs` `Node.js` `Express` `PHP` `MySQL` |
+| **AI & tooling** | `Claude API` `LLM tool use` `Electron` `Gradle` `ADB` `Git` |
 
-<img src="assets/section-sdks.svg" width="100%" alt="03 Open-source SDKs" />
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-expertise-mobile.svg" />
+  <img src="assets/section-expertise.svg" width="100%" alt="03 Engineering expertise" />
+</picture>
 
-Customer-engagement SDKs I work on at **WebEngage** (2022–present), used in production apps. **280+ commits** across 15 public repos.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Mobile SDK development</h4>
+      SDKs and libraries that other developers integrate: public APIs, native Android and iOS implementations, sample apps and integration guides.
+    </td>
+    <td width="50%" valign="top">
+      <h4>Cross-platform plugins &amp; bridges</h4>
+      Flutter method channels, React Native native modules, Expo config plugins, Cordova/Capacitor plugins and Unity bridges on top of native SDKs.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Native Android &amp; iOS</h4>
+      Kotlin, Java and Jetpack Compose on Android; Swift and Objective-C on iOS, including notification service and content extensions.
+    </td>
+    <td width="50%" valign="top">
+      <h4>Push notifications &amp; engagement</h4>
+      FCM and APNs delivery, rich push, notification inboxes and in-app personalization, across native and cross-platform apps.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Developer tools &amp; debugging</h4>
+      Tools that shorten the debug loop: a push-notification tester, a mock API server and an APK pull/push desktop app.
+    </td>
+    <td width="50%" valign="top">
+      <h4>AI agents &amp; LLM integration</h4>
+      LLM-powered agents with schema-validated, permission-checked tools, plus reusable prompt libraries for AI-assisted development.
+    </td>
+  </tr>
+</table>
 
-| Platform | Repositories | Commits |
-|---|---|---:|
-| **Flutter** | [webengage-flutter](https://github.com/WebEngage/webengage-flutter) · [we-personalization-flutter](https://github.com/WebEngage/we-personalization-flutter) · [flutter-we-notification-inbox](https://github.com/WebEngage/flutter-we-notification-inbox) | `137` |
-| **iOS** | [webengage-ios-sdk](https://github.com/WebEngage/webengage-ios-sdk) · [WEServiceExtension](https://github.com/WebEngage/WEServiceExtension) · [WEContentExtension](https://github.com/WebEngage/WEContentExtension) · [WebEngageAppEx](https://github.com/WebEngage/WebEngageAppEx) | `97` |
-| **React Native · Expo** | [react-native-webengage](https://github.com/WebEngage/react-native-webengage) · [react-native-we-personalization](https://github.com/WebEngage/react-native-we-personalization) · [we-segment-react-native](https://github.com/WebEngage/we-segment-react-native) · [webengage-expo](https://github.com/WebEngage/webengage-expo) · [webengage-expo-push](https://github.com/WebEngage/webengage-expo-push) | `39` |
-| **Cordova · Ionic · Capacitor** (Android + iOS) | [cordova-plugin](https://github.com/WebEngage/cordova-plugin) · [we-capacitor-plugins](https://github.com/WebEngage/we-capacitor-plugins) | `13` |
-| **Unity** (Android + iOS) | [webengage-unity](https://github.com/WebEngage/webengage-unity) · [webengage-unity-android](https://github.com/WebEngage/webengage-unity-android) · [webengage-unity-ios](https://github.com/WebEngage/webengage-unity-ios) | — |
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-experience-mobile.svg" />
+  <img src="assets/section-experience.svg" width="100%" alt="04 Experience" />
+</picture>
 
-<sub>Covers the native iOS SDK, the iOS push extensions (rich notifications and notification service), and plugin bridges from each cross-platform framework to the native Android and iOS SDKs.</sub>
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/timeline-mobile.svg" />
+  <img src="assets/timeline.svg" width="100%" alt="Experience timeline: Inspeero Technologies, Android Developer, Apr 2018 – Jan 2021; Image Online, Android Developer, Jan 2021 – Aug 2022; WebEngage, Senior Software Engineer, Aug 2022 – present" />
+</picture>
 
-<img src="assets/section-projects.svg" width="100%" alt="04 Featured builds" />
+#### WebEngage · Senior Software Engineer · Aug 2022 – present
+- Build the cross-platform SDKs and plugins customers use to integrate WebEngage: **Flutter, React Native, Expo, Cordova, Capacitor and Unity**.
+- Work on the **native iOS SDK** and the iOS push extensions for rich notifications and notification service.
+- Build developer tools for testing and debugging SDK integrations.
+- 280+ commits across 15 public SDK repositories (listed under Open-source contributions below).
 
-<p align="center">
-  <a href="https://mocable.lokihomelab.in/"><img src="assets/card-mocable.svg" width="49%" alt="Mocable: self-hosted mock REST API service (live)" /></a>
-  <a href="https://push.lokihomelab.in/"><img src="assets/card-notifynow.svg" width="49%" alt="Notify Now: FCM and APNs push testing tool (live)" /></a>
-  <img src="assets/card-facegallery.svg" width="49%" alt="Face Gallery: offline gallery with on-device face grouping" />
-  <img src="assets/card-chess.svg" width="49%" alt="Chess Trainer: bots 1–10 with a live coach" />
-  <a href="https://github.com/mk7002/aia"><img src="assets/card-friday.svg" width="49%" alt="FRIDAY: macOS AI desktop assistant powered by Claude" /></a>
-  <a href="https://github.com/mk7002/apklab"><img src="assets/card-apklab.svg" width="49%" alt="APKLab: pull and push APKs to Android devices" /></a>
-</p>
+#### Image Online Pvt. Ltd. · Android Developer · Jan 2021 – Aug 2022
+- Android apps for document scanning (PDF and PPT export) and two OTT video-on-demand platforms.
 
-<sub>Source: [mocable](https://github.com/mk7002/mocable) · [notify-now](https://github.com/mk7002/PushNotification)</sub>
+#### Inspeero Technologies · Android Developer · Apr 2018 – Jan 2021
+- Shipped 14 client apps across health, IoT, social, enterprise, music and e-commerce.
+- **Designed the whole architecture** of OrgSens, an enterprise team-review app, and **built CommandOp end to end**: a digital-signage app with kiosk mode, WebView and phone/TV support.
+- Wrote **React Native ↔ Android bridges** for Samsung Health, location and in-app purchases, and built XMPP chat for MBolder.
 
-<img src="assets/section-playstore.svg" width="100%" alt="05 Live on Google Play" />
-
-Apps I built and shipped to the Play Store since 2024. **120K+ installs** in total.
+#### Shipped to Google Play · 2024 –
 
 | App | What it is | Installs |
 |---|---|---:|
@@ -82,32 +131,14 @@ Apps I built and shipped to the Play Store since 2024. **120K+ installs** in tot
 | [**LUBE Corporation**](https://play.google.com/store/apps/details?id=com.lube) | Product verification and catalog app for a lubrication-equipment maker | `500+` |
 | [**Susha Associate**](https://play.google.com/store/apps/details?id=com.susha.SushaAssociate) | Partner app where associates earn by referring matches | `10+` |
 
-<sub>Published by [Susha Branding Solutions](https://play.google.com/store/apps/dev?id=6660512038571678305) and [SeQr Technology](https://play.google.com/store/apps/developer?id=SeQr+Technology).</sub>
-
-<img src="assets/section-archive.svg" width="100%" alt="06 Archive" />
+<sub>Install counts as shown on Google Play. Published by <a href="https://play.google.com/store/apps/dev?id=6660512038571678305">Susha Branding Solutions</a> and <a href="https://play.google.com/store/apps/developer?id=SeQr+Technology">SeQr Technology</a>.</sub>
 
 <details>
-<summary><b>More side projects</b>: EnglishFlow, DueDash, DayForge, Parallel Life, App Builder</summary>
+<summary><b>All earlier client apps (2018–2022)</b></summary>
 
 <br>
 
-| Project | What it is | Stack |
-|---|---|---|
-| **EnglishFlow** | Learn English by reading: 27 graded stories, quizzes, word lookup, vocabulary practice and streaks | `Flutter` |
-| **DueDash** | Bill and IOU reminders with recurring cycles, insights, app lock, home widget and Drive backup | `Flutter` |
-| **DayForge** | N-day habit challenges with reminders, charts and Drive backup | `Flutter` |
-| **Parallel Life** | Explore decisions by sketching alternative paths, running small experiments and comparing scenarios | `Flutter` `Drift` |
-| **App Builder** | One Flutter codebase that renders any app from a JSON config, plus a web admin with a live preview | `Flutter` |
-| [**Android-Network-Connectivity**](https://github.com/mk7002/Android-Network-Connectivity) | Library that listens for internet connectivity changes | `Java` |
-
-</details>
-
-<details>
-<summary><b>Earlier client work (2018–2022)</b>: 17 apps across OTT, health, IoT, social and enterprise</summary>
-
-<br>
-
-**Image Online Pvt. Ltd.** · Android Developer · 2021–2022
+**Image Online Pvt. Ltd.**
 
 | App | What it is |
 |---|---|
@@ -115,29 +146,145 @@ Apps I built and shipped to the Play Store since 2024. **120K+ installs** in tot
 | The Channel One | OTT video-on-demand platform for shows and movies |
 | FilmyStations | Video-on-demand streaming platform |
 
-**Inspeero Technologies** · Android Developer · 2018–2021
+**Inspeero Technologies**
 
 | App | What it is | My role |
 |---|---|---|
 | Qajiq | Employee, attendance, work and salary management | Android development |
 | JARMA | Health tracker: fever, periods, immunisation, doctors and reports | Built multiple UI screens and their features |
 | Purelenses | B2B e-commerce where manufacturers list catalogs and retailers order | React Native |
-| SELF | Rewards for reaching academic and fitness goals | RN ↔ Android bridge for **Samsung Health** |
-| Glance | Dating app | RN ↔ Android bridges for **location and in-app purchases** |
+| SELF | Rewards for reaching academic and fitness goals | RN ↔ Android bridge for Samsung Health |
+| Glance | Dating app | RN ↔ Android bridges for location and in-app purchases |
 | RemoteLogger | Library that collects app logs into a remote store | Library development |
 | Canvia | Smart art frame that shows curated artworks | New features and bug fixes |
 | Unsyned | Music discovery through contests where listeners vote | Music player UI, complex UI, deep linking |
-| OrgSens | Team meetings, peer reviews by KPI and weekly surveys | **Designed the whole architecture** and data flow |
-| CommandOp | Digital signage: pushes HTML content to registered devices | **Built the whole app**: kiosk mode, WebView, phone and TV |
+| OrgSens | Team meetings, peer reviews by KPI and weekly surveys | Designed the whole architecture and data flow |
+| CommandOp | Digital signage: pushes HTML content to registered devices | Built the whole app: kiosk mode, WebView, phone and TV |
 | Picostone | Control home lights, fans and ACs from your phone (IoT) | Android development |
-| MBolder | Social platform that matches you into small groups | Java and **XMPP** chat |
+| MBolder | Social platform that matches you into small groups | Java and XMPP chat |
 | iFix | Movie and TV streaming | Android development |
 | BizQuiz | Kiosk-mode marketing app for Chase Bank business services | Android development |
 
 </details>
 
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-projects-mobile.svg" />
+  <img src="assets/section-projects.svg" width="100%" alt="05 Featured projects" />
+</picture>
+
+<a href="https://push.lokihomelab.in/"><img src="assets/screens/notifynow-banner.jpg" width="100%" alt="Notify Now: Test push notifications in seconds. Android (FCM) and iOS (APNs)." /></a>
+
+### Notify Now
+A push-notification playground for mobile developers. Send test pushes to a real device over **FCM HTTP v1** (service-account OAuth2) or **APNs** (.p8 token auth, sandbox and production), and save reusable payload templates. Keys stay on your device.
+
+`Flutter Web` `FCM` `APNs` `JWT` &nbsp;·&nbsp; **[Live app ↗](https://push.lokihomelab.in/)** · [Repository](https://github.com/mk7002/PushNotification)
+
 <br>
 
+<a href="https://mocable.lokihomelab.in/"><img src="assets/screens/mocable-banner.jpg" width="100%" alt="Mocable: Mock REST APIs in seconds" /></a>
+
+### Mocable
+A personal mock REST API platform. Define endpoints with any status, headers and body, add latency, import mocks and inspect every request in a log, so frontend work never waits on the backend.
+
+`Node.js` `Express` `Firebase` `PHP` `MySQL` &nbsp;·&nbsp; **[Live app ↗](https://mocable.lokihomelab.in/)** · [Repository](https://github.com/mk7002/mocable)
+
+<br>
+
+<a href="https://github.com/mk7002/apklab"><img src="assets/screens/apklab-banner.jpg" width="100%" alt="APK Lab: Pull APK and Push APK screens" /></a>
+
+### APK Lab
+A macOS desktop app to **pull and push APKs** between your Mac and connected Android devices. It detects `adb`, installs split APKs together with `adb install-multiple`, uninstalls by package name and exports logs.
+
+`Flutter` `Dart` `macOS` `ADB` &nbsp;·&nbsp; **[Repository ↗](https://github.com/mk7002/apklab)**
+
+<br>
+
+### Android Network Connectivity
+An Android library that exposes internet connectivity as an **RxJava** stream: subscribe once and react whenever the device goes on or offline. Published on JitPack.
+
+`Java` `Android` `RxJava` &nbsp;·&nbsp; **[Repository ↗](https://github.com/mk7002/Android-Network-Connectivity)** · [JitPack](https://jitpack.io/#mk7002/Android-Network-Connectivity)
+
+### FRIDAY <sub>· in development</sub>
+A macOS desktop assistant that uses **Claude** as its reasoning engine. It does real engineering work (files, terminal, Git, builds, debugging) through a tool layer where every action is **schema-validated, permission-checked and logged**, and risky actions wait for approval. Its memory is readable Markdown.
+
+`Electron` `React` `TypeScript` `Claude API` &nbsp;·&nbsp; Source coming soon
+
+### Prompt Library
+A categorized, templated collection of AI prompts for coding, writing, image generation and productivity, with contribution rules. It can also serve as the prompt source for an **AI skill** (`SKILL.md`).
+
+`Prompt engineering` `AI skills` &nbsp;·&nbsp; **[Repository ↗](https://github.com/mk7002/prompts)**
+
+<details>
+<summary><b>More projects</b>: Face Gallery, Chess Trainer, EnglishFlow, DueDash, DayForge, Parallel Life, App Builder (source coming to GitHub)</summary>
+
+<br>
+
+| Project | What it is | Stack |
+|---|---|---|
+| **Face Gallery** | Offline Android gallery with on-device face grouping: ML Kit detection, 5-point alignment and MobileFaceNet embeddings. No `INTERNET` permission. | `Kotlin` `Compose` `ML Kit` `LiteRT` `Room` |
+| **Chess Trainer** | Bots at levels 1–10 with a live coach (threats, the opponent's plan, hints and move grades), using a chess engine written from scratch | `Kotlin` `Compose` |
+| **EnglishFlow** | Learn English by reading: 27 graded stories, quizzes, word lookup, vocabulary practice and streaks. Offline-first. | `Flutter` |
+| **DueDash** | Bill and IOU reminders with recurring cycles, insights, app lock, home widget and Drive backup | `Flutter` |
+| **DayForge** | N-day habit challenges with reminders, charts and Drive backup | `Flutter` |
+| **Parallel Life** | Explore decisions by sketching alternative paths, running small experiments and comparing scenarios | `Flutter` `Drift` |
+| **App Builder** | One Flutter codebase that renders any app from a JSON config, plus a web admin with a live preview | `Flutter` |
+
+</details>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-opensource-mobile.svg" />
+  <img src="assets/section-opensource.svg" width="100%" alt="06 Open-source contributions" />
+</picture>
+
+Public SDK repositories I contribute to at **WebEngage**, used in production apps. Counts are my commits on each repo's default branch.
+
+| Platform | Repositories | Commits |
+|---|---|---:|
+| **Flutter** | [webengage-flutter](https://github.com/WebEngage/webengage-flutter) · [we-personalization-flutter](https://github.com/WebEngage/we-personalization-flutter) · [flutter-we-notification-inbox](https://github.com/WebEngage/flutter-we-notification-inbox) | `137` |
+| **iOS** | [webengage-ios-sdk](https://github.com/WebEngage/webengage-ios-sdk) · [WEServiceExtension](https://github.com/WebEngage/WEServiceExtension) · [WEContentExtension](https://github.com/WebEngage/WEContentExtension) · [WebEngageAppEx](https://github.com/WebEngage/WebEngageAppEx) | `97` |
+| **React Native · Expo** | [react-native-webengage](https://github.com/WebEngage/react-native-webengage) · [react-native-we-personalization](https://github.com/WebEngage/react-native-we-personalization) · [we-segment-react-native](https://github.com/WebEngage/we-segment-react-native) · [webengage-expo](https://github.com/WebEngage/webengage-expo) · [webengage-expo-push](https://github.com/WebEngage/webengage-expo-push) | `39` |
+| **Cordova · Ionic · Capacitor** | [cordova-plugin](https://github.com/WebEngage/cordova-plugin) · [we-capacitor-plugins](https://github.com/WebEngage/we-capacitor-plugins) | `13` |
+| **Unity** | [webengage-unity](https://github.com/WebEngage/webengage-unity) · [webengage-unity-android](https://github.com/WebEngage/webengage-unity-android) · [webengage-unity-ios](https://github.com/WebEngage/webengage-unity-ios) | — |
+
+My own open-source library: [Android-Network-Connectivity](https://github.com/mk7002/Android-Network-Connectivity) (RxJava connectivity observer, on JitPack).
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-exploring-mobile.svg" />
+  <img src="assets/section-exploring.svg" width="100%" alt="07 Currently exploring" />
+</picture>
+
+- **Agentic developer tools.** In FRIDAY, an LLM plans the work while a deterministic tool layer validates, permission-checks and logs every action, and pauses risky ones for approval.
+- **Prompts as maintained code.** My prompt library is versioned, templated and reviewable, and it doubles as the source for an AI skill.
+- **AI-assisted engineering workflows.** I write development standards so coding agents produce consistent, reviewable changes across my projects.
+- **On-device ML on mobile.** I run face detection and embeddings (ML Kit, MobileFaceNet on LiteRT) fully offline, tuned and checked against a labelled dataset.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-activity-mobile.svg" />
+  <img src="assets/section-activity.svg" width="100%" alt="08 GitHub activity" />
+</picture>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/stats-mobile.svg" />
+  <img src="assets/stats.svg" width="100%" alt="Contribution statistics for the last 12 months" />
+</picture>
+
+<br>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/contributions-mobile.svg" />
+  <img src="assets/contributions.svg" width="100%" alt="Contribution heatmap for the last 12 months" />
+</picture>
+
+<sub>Combines my personal account (mk7002) and my work account (<a href="https://github.com/MilindWebEngage">MilindWebEngage</a>). Rebuilt daily by a GitHub Action from GitHub's public contribution calendars.</sub>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-contact-mobile.svg" />
+  <img src="assets/section-contact.svg" width="100%" alt="09 Contact" />
+</picture>
+
 <p align="center">
-  <a href="https://www.linkedin.com/in/milindkeni"><img src="assets/footer.svg" width="100%" alt="Open to conversations about mobile SDKs, Flutter/RN plugins and Android. Say hi on LinkedIn." /></a>
+  I'm happy to talk about <b>mobile SDKs</b>, <b>cross-platform engineering</b> and <b>developer tooling</b>.
+  <br><br>
+  <a href="https://www.linkedin.com/in/milindkeni"><img src="https://img.shields.io/badge/LinkedIn-milindkeni-171B2B?style=for-the-badge&logo=linkedin&logoColor=38BDF8&labelColor=0B0D12" alt="LinkedIn: milindkeni" /></a>
+  <a href="https://github.com/MilindWebEngage"><img src="https://img.shields.io/badge/Work_GitHub-MilindWebEngage-171B2B?style=for-the-badge&logo=github&logoColor=A78BFA&labelColor=0B0D12" alt="Work GitHub: MilindWebEngage" /></a>
 </p>
