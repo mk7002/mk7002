@@ -11,7 +11,7 @@ from theme import (BG, BLUE, BORDER, DIM, MUTED, SURFACE, TEXT, VIOLET, VIOLET_S
 
 NAME = "Milind Keni"
 KICKER = "SENIOR SOFTWARE ENGINEER  ·  WEBENGAGE"
-TAGLINE = "Mobile & Cross-Platform Engineering"
+TAGLINE = "Android & Cross-Platform Engineering"
 TYPED = "building mobile SDKs, developer tools & AI agents"
 PLATFORMS = "Android  ·  iOS  ·  Flutter  ·  React Native  ·  Cordova  ·  Capacitor"
 
@@ -27,11 +27,12 @@ SECTIONS = [
     ("stack", "02", "Technology stack"),
     ("expertise", "03", "Engineering expertise"),
     ("experience", "04", "Experience"),
-    ("projects", "05", "Featured projects"),
-    ("opensource", "06", "Open-source contributions"),
-    ("exploring", "07", "Currently exploring"),
-    ("activity", "08", "GitHub activity"),
-    ("contact", "09", "Contact"),
+    ("playstore", "05", "Published apps"),
+    ("projects", "06", "Featured projects"),
+    ("sideprojects", "07", "Side projects"),
+    ("opensource", "08", "Open-source contributions"),
+    ("exploring", "09", "Currently exploring"),
+    ("activity", "10", "GitHub activity"),
 ]
 
 # (company, role, start year as float, end year or None for present, label for dates)
@@ -109,7 +110,7 @@ def hero_mobile():
 <text x="48" y="92" class="mono" font-size="19" fill="{BLUE}" letter-spacing="2">SENIOR SOFTWARE ENGINEER</text>
 <text x="48" y="122" class="mono" font-size="19" fill="{BLUE}" letter-spacing="2">@ WEBENGAGE</text>
 <text x="44" y="226" class="sans" font-size="88" font-weight="800" fill="{TEXT}" letter-spacing="-3">{esc(NAME)}</text>
-<text x="48" y="290" class="sans" font-size="38" font-weight="650" fill="url(#accent)">Mobile &amp; Cross-Platform</text>
+<text x="48" y="290" class="sans" font-size="38" font-weight="650" fill="url(#accent)">Android &amp; Cross-Platform</text>
 <text x="48" y="338" class="sans" font-size="38" font-weight="650" fill="url(#accent)">Engineering</text>
 {typed_line(48, 418, 22, VIOLET_SOFT, "mobile SDKs · dev tools · AI agents", 13.25)}
 <text x="48" y="484" class="mono" font-size="18" fill="{MUTED}">Android · iOS · Flutter · RN · Cordova</text>
@@ -236,3 +237,136 @@ if __name__ == "__main__":
         section(*s)
     timeline()
     timeline_mobile()
+
+
+# ---------------------------------------------------------------------------
+# Intro: Kotlin "profile.kt" editor card
+# ---------------------------------------------------------------------------
+import re as _re
+
+KT_DESKTOP = [
+    'object Milind : Engineer {',
+    '    override val role       = "Senior Software Engineer @ WebEngage"',
+    '    override val core       = "Android"                // since 2018, still today',
+    '    override val experience = 8.years                  // since Apr 2018',
+    '    override val platforms  = listOf("Android", "iOS", "Flutter", "React Native",',
+    '                                     "Cordova", "Capacitor", "Unity")',
+    '    override val focus      = listOf("Mobile SDKs", "Cross-platform plugins",',
+    '                                     "Developer tools", "AI agents")',
+    '}',
+]
+KT_MOBILE = [
+    'object Milind : Engineer {',
+    '  val role = "Senior Software Engineer"',
+    '  val company = "WebEngage"',
+    '  val core = "Android" // since 2018',
+    '  val experience = 8.years // since 2018',
+    '  val platforms = listOf(',
+    '    "Android", "iOS", "Flutter",',
+    '    "React Native", "Cordova",',
+    '    "Capacitor", "Unity")',
+    '  val focus = listOf(',
+    '    "Mobile SDKs", "Plugins",',
+    '    "Developer tools", "AI agents")',
+    '}',
+]
+_KT = _re.compile(r'(//.*$)|("[^"]*")|\b(object|override|val)\b|\b(\d+)\b|\b(Milind|Engineer)\b|(\.years|listOf)')
+
+
+def kt_line(line):
+    out, pos = [], 0
+    for m in _KT.finditer(line):
+        if m.start() > pos:
+            out.append((line[pos:m.start()], TEXT))
+        color = [DIM, "#86EFAC", VIOLET_SOFT, BLUE, "#FDE68A", BLUE][[i for i in range(1, 7) if m.group(i)][0] - 1]
+        out.append((m.group(0), color))
+        pos = m.end()
+    out.append((line[pos:], TEXT))
+    return "".join(f'<tspan fill="{c}">{esc(t)}</tspan>' for t, c in out if t)
+
+
+def intro_card(name, lines, w, size, lh, pad):
+    bar = 46
+    h = bar + pad + len(lines) * lh + pad - lh * 0.35
+    rows = "\n".join(
+        f'<text x="{pad + 34}" y="{bar + pad + i * lh}" class="mono" font-size="{size - 3}" fill="{DIM}" text-anchor="end">{i + 1}</text>'
+        f'<text x="{pad + 56}" y="{bar + pad + i * lh}" class="mono" font-size="{size}" xml:space="preserve">{kt_line(l)}</text>'
+        for i, l in enumerate(lines))
+    body = f"""<defs><radialGradient id="g" cx="1" cy="0" r="0.8"><stop offset="0" stop-color="{VIOLET}" stop-opacity="0.18"/><stop offset="1" stop-color="{VIOLET}" stop-opacity="0"/></radialGradient>
+<clipPath id="c"><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16"/></clipPath></defs>
+<g clip-path="url(#c)"><rect width="{w}" height="{h}" fill="{BG}"/><rect width="{w}" height="{h}" fill="url(#g)"/>
+<rect width="{w}" height="{bar}" fill="{SURFACE}"/><line x1="0" y1="{bar}" x2="{w}" y2="{bar}" stroke="{BORDER}"/></g>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" stroke="{BORDER}" stroke-width="1.5"/>
+<circle cx="26" cy="23" r="6" fill="#FF5F57"/><circle cx="46" cy="23" r="6" fill="#FEBC2E"/><circle cx="66" cy="23" r="6" fill="#28C840"/>
+<rect x="92" y="10" width="{len('profile.kt') * 9 + 34}" height="36" rx="8" fill="{BG}"/>
+<text x="109" y="33" class="mono" font-size="14" fill="{TEXT}">profile.kt</text>
+{rows}"""
+    write_svg(name, body, w, round(h), "profile.kt: " + " ".join(l.strip() for l in lines))
+
+
+# ---------------------------------------------------------------------------
+# WebEngage SDK contributions chart
+# ---------------------------------------------------------------------------
+SDK_ROWS = [  # platform, commits (None = no default-branch commits found), repo count
+    ("Flutter", 137, 3), ("iOS", 97, 4), ("React Native · Expo", 39, 5),
+    ("Cordova · Ionic · Capacitor", 13, 2), ("Unity", None, 3),
+]
+
+
+def sdk_chart(name, w, label_size, num_size, row_h, label_w, mobile=False):
+    pad, top = 40, 92
+    h = top + len(SDK_ROWS) * row_h + 34
+    mx = max(c for _, c, _ in SDK_ROWS if c)
+    rows = []
+    for i, (plat, commits, repos) in enumerate(SDK_ROWS):
+        y = top + i * row_h
+        if mobile:
+            ty, by, bx, bw = y, y + 22, pad, w - 2 * pad
+        else:
+            ty, by, bx, bw = y + 22, y + 8, pad + label_w, w - 2 * pad - label_w - 110
+        rows.append(f'<text x="{pad}" y="{ty}" class="sans" font-size="{label_size}" font-weight="600" fill="{TEXT}">{esc(plat)}</text>')
+        rows.append(f'<text x="{w - pad}" y="{ty}" text-anchor="end" class="mono" font-size="{label_size - 3}" fill="{DIM}">{repos} repos</text>')
+        rows.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="14" rx="7" fill="{SURFACE}"/>')
+        if commits:
+            fw = max(14, bw * commits / mx)
+            rows.append(f'<rect x="{bx}" y="{by}" width="{fw}" height="14" rx="7" fill="url(#accent)"/>')
+            rows.append(f'<text x="{bx + fw + 10 if fw < bw - 70 else bx + fw - 10}" y="{by + 12}" '
+                        f'text-anchor="{"start" if fw < bw - 70 else "end"}" class="mono" font-size="{num_size}" font-weight="700" '
+                        f'fill="{TEXT if fw < bw - 70 else BG}">{commits}</text>')
+        else:
+            rows.append(f'<text x="{bx + 12}" y="{by + 12}" class="mono" font-size="{num_size}" fill="{MUTED}">contributor</text>')
+    body = f"""<defs>{ACCENT_GRADIENT}</defs>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>
+<text x="{pad}" y="54" class="sans" font-size="{label_size + 10}" font-weight="800" fill="url(#accent)">280+ commits</text>
+<text x="{pad + (label_size + 10) * 7.6 + 14}" y="54" class="sans" font-size="{label_size + 1}" fill="{MUTED}">{"" if mobile else "across 15 public WebEngage SDK repositories"}</text>
+{chr(10).join(rows)}"""
+    write_svg(name, body, w, h, "WebEngage SDK commits by platform: " + "; ".join(f"{p} {c or 'contributor'}" for p, c, _ in SDK_ROWS))
+
+
+# ---------------------------------------------------------------------------
+# Contact footer banner
+# ---------------------------------------------------------------------------
+def contact_footer(name, w, h, title_size, sub_size, lines):
+    defs, bg = panel(w, h, rx=20)
+    cy = h / 2 - (len(lines) - 1) * title_size * 0.6
+    titles = "".join(
+        f'<text x="{w / 2}" y="{cy + i * title_size * 1.15}" text-anchor="middle" class="sans" font-size="{title_size}" '
+        f'font-weight="800" letter-spacing="-1.5" fill="{"url(#accent)" if i == len(lines) - 1 else TEXT}">{esc(t)}</text>'
+        for i, t in enumerate(lines))
+    sub_y = cy + len(lines) * title_size * 1.15 + sub_size * 0.6
+    body = f"""{defs}
+{bg}
+<text x="{w / 2}" y="{cy - title_size * 1.25}" text-anchor="middle" class="mono" font-size="{sub_size - 2}" fill="{BLUE}" letter-spacing="2">MILIND KENI · MUMBAI, INDIA</text>
+{titles}
+<text x="{w / 2}" y="{sub_y}" text-anchor="middle" class="sans" font-size="{sub_size}" fill="{MUTED}">Mobile SDKs · Cross-platform engineering · Developer tooling</text>
+<rect x="0" y="{h - 3}" width="{w}" height="3" fill="url(#accent)" opacity="0.9"/>"""
+    write_svg(name, body, w, h, "Contact: " + " ".join(lines))
+
+
+if __name__ == "__main__":
+    intro_card("intro.svg", KT_DESKTOP, 1280, 19, 34, 36)
+    intro_card("intro-mobile.svg", KT_MOBILE, 720, 24, 40, 30)
+    sdk_chart("sdk.svg", 1280, 19, 15, 58, 330)
+    sdk_chart("sdk-mobile.svg", 720, 24, 18, 82, 0, mobile=True)
+    contact_footer("contact.svg", 1280, 300, 58, 19, ["Let's build something", "developers love."])
+    contact_footer("contact-mobile.svg", 720, 420, 58, 22, ["Let's build", "something", "developers love."])

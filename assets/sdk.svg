@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="416" viewBox="0 0 1280 416" fill="none" role="img">
+<title>WebEngage SDK commits by platform: Flutter 137; iOS 97; React Native · Expo 39; Cordova · Ionic · Capacitor 13; Unity contributor</title>
+<style>
+  .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace; }
+</style>
+<defs><linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#A78BFA"/><stop offset="0.45" stop-color="#7C3AED"/><stop offset="1" stop-color="#38BDF8"/>
+  </linearGradient></defs>
+<rect x="1" y="1" width="1278" height="414" rx="18" fill="#0B0D12" stroke="#262B3D" stroke-width="1.5"/>
+<text x="40" y="54" class="sans" font-size="29" font-weight="800" fill="url(#accent)">280+ commits</text>
+<text x="274.4" y="54" class="sans" font-size="20" fill="#9CA3AF">across 15 public WebEngage SDK repositories</text>
+<text x="40" y="114" class="sans" font-size="19" font-weight="600" fill="#E5E7EB">Flutter</text>
+<text x="1240" y="114" text-anchor="end" class="mono" font-size="16" fill="#6B7280">3 repos</text>
+<rect x="370" y="100" width="760" height="14" rx="7" fill="#171B2B"/>
+<rect x="370" y="100" width="760.0" height="14" rx="7" fill="url(#accent)"/>
+<text x="1120.0" y="112" text-anchor="end" class="mono" font-size="15" font-weight="700" fill="#0B0D12">137</text>
+<text x="40" y="172" class="sans" font-size="19" font-weight="600" fill="#E5E7EB">iOS</text>
+<text x="1240" y="172" text-anchor="end" class="mono" font-size="16" fill="#6B7280">4 repos</text>
+<rect x="370" y="158" width="760" height="14" rx="7" fill="#171B2B"/>
+<rect x="370" y="158" width="538.1021897810219" height="14" rx="7" fill="url(#accent)"/>
+<text x="918.1021897810219" y="170" text-anchor="start" class="mono" font-size="15" font-weight="700" fill="#E5E7EB">97</text>
+<text x="40" y="230" class="sans" font-size="19" font-weight="600" fill="#E5E7EB">React Native · Expo</text>
+<text x="1240" y="230" text-anchor="end" class="mono" font-size="16" fill="#6B7280">5 repos</text>
+<rect x="370" y="216" width="760" height="14" rx="7" fill="#171B2B"/>
+<rect x="370" y="216" width="216.35036496350364" height="14" rx="7" fill="url(#accent)"/>
+<text x="596.3503649635036" y="228" text-anchor="start" class="mono" font-size="15" font-weight="700" fill="#E5E7EB">39</text>
+<text x="40" y="288" class="sans" font-size="19" font-weight="600" fill="#E5E7EB">Cordova · Ionic · Capacitor</text>
+<text x="1240" y="288" text-anchor="end" class="mono" font-size="16" fill="#6B7280">2 repos</text>
+<rect x="370" y="274" width="760" height="14" rx="7" fill="#171B2B"/>
+<rect x="370" y="274" width="72.11678832116789" height="14" rx="7" fill="url(#accent)"/>
+<text x="452.11678832116786" y="286" text-anchor="start" class="mono" font-size="15" font-weight="700" fill="#E5E7EB">13</text>
+<text x="40" y="346" class="sans" font-size="19" font-weight="600" fill="#E5E7EB">Unity</text>
+<text x="1240" y="346" text-anchor="end" class="mono" font-size="16" fill="#6B7280">3 repos</text>
+<rect x="370" y="332" width="760" height="14" rx="7" fill="#171B2B"/>
+<text x="382" y="344" class="mono" font-size="15" fill="#9CA3AF">contributor</text>
+</svg>

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Builds the activity card and contribution heatmap from GitHub's public contribution calendars.
+"""Builds the compact activity card from GitHub's public contribution calendars.
 
+Outputs assets/activity.svg (12 months) and assets/activity-mobile.svg (6 months).
 Run locally or from .github/workflows/update-stats.yml:  python3 scripts/update_stats.py
 Standard library only; needs no token.
 """
@@ -9,8 +10,7 @@ import re
 import urllib.request
 from xml.sax.saxutils import escape as esc
 
-from theme import (ACCENT_GRADIENT, BG, BLUE, BORDER, DIM, MUTED, SURFACE, TEXT, VIOLET,
-                   write_svg)
+from theme import ACCENT_GRADIENT, BG, BLUE, BORDER, DIM, MUTED, SURFACE, TEXT, VIOLET, write_svg
 
 ACCOUNTS = ["mk7002", "MilindWebEngage"]  # personal + work account
 ACCOUNTS_LABEL = "mk7002 + MilindWebEngage (work)"
@@ -21,10 +21,9 @@ def fetch_calendar(user):
     req = urllib.request.Request(f"https://github.com/users/{user}/contributions",
                                  headers={"User-Agent": "profile-readme-stats"})
     html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
-    dates = dict(re.findall(r'data-date="(\d{4}-\d{2}-\d{2})"\s+id="([^"]+)"', html))
-    if not dates:  # attribute order fallback
-        dates = {d: i for i, d in re.findall(r'id="([^"]+)"[^>]*data-date="(\d{4}-\d{2}-\d{2})"', html)}
-    id_to_date = {v: k for k, v in dates.items()}
+    id_to_date = {i: d for d, i in re.findall(r'data-date="(\d{4}-\d{2}-\d{2})"\s+id="([^"]+)"', html)}
+    if not id_to_date:  # attribute order fallback
+        id_to_date = dict(re.findall(r'id="([^"]+)"[^>]*data-date="(\d{4}-\d{2}-\d{2})"', html))
     counts = {}
     for cell_id, text in re.findall(r'<tool-tip[^>]*for="([^"]+)"[^>]*>([^<]*)</tool-tip>', html):
         if cell_id in id_to_date:
@@ -59,88 +58,76 @@ def streaks(days):
     return longest, current
 
 
-def level(n, cuts):
-    if n == 0:
-        return 0
-    return 1 + sum(n > c for c in cuts)
-
-
-def heatmap(days, total, name="contributions.svg", cell=17, gap=4, caption_text=None):
-    left, top = 64, 58
-    first = dt.date.fromisoformat(days[0][0])
-    offset = (first.weekday() + 1) % 7  # Sunday = row 0
-    nonzero = sorted(n for _, n in days if n)
-    cuts = [nonzero[int(len(nonzero) * q)] for q in (0.25, 0.5, 0.75)] if nonzero else [1, 2, 3]
-    weeks = (len(days) + offset + 6) // 7
-    w = left + weeks * (cell + gap) + 40
-    h = top + 7 * (cell + gap) + 70
-    rects, months, last_month = [], [], None
+def grid(days, x0, y0, cell, gap, cuts):
+    """Heatmap cells + month labels. Returns (svg, width, height)."""
+    offset = (dt.date.fromisoformat(days[0][0]).weekday() + 1) % 7  # Sunday = row 0
+    out, last_month = [], None
     for i, (day, n) in enumerate(days):
         col, row = divmod(i + offset, 7)
-        x, y = left + col * (cell + gap), top + row * (cell + gap)
-        rects.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{LEVEL_COLORS[level(n, cuts)]}">'
-                     f'<title>{n} on {day}</title></rect>')
+        x, y = x0 + col * (cell + gap), y0 + row * (cell + gap)
+        lvl = 0 if n == 0 else 1 + sum(n > c for c in cuts)
+        out.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="{cell * 0.22:.1f}" fill="{LEVEL_COLORS[lvl]}"><title>{n} on {day}</title></rect>')
         d = dt.date.fromisoformat(day)
-        if d.day <= 7 and row == 0 and d.month != last_month:
-            months.append(f'<text x="{x}" y="{top - 14}" class="mono" font-size="13" fill="{MUTED}">{d.strftime("%b")}</text>')
+        if row == 0 and d.day <= 7 and d.month != last_month:
+            out.append(f'<text x="{x}" y="{y0 - 12}" class="mono" font-size="{cell * 0.72:.0f}" fill="{MUTED}">{d.strftime("%b")}</text>')
             last_month = d.month
-    labels = "".join(f'<text x="{left - 14}" y="{top + r * (cell + gap) + 13}" text-anchor="end" class="mono" font-size="12" fill="{DIM}">{t}</text>'
-                     for r, t in ((1, "Mon"), (3, "Wed"), (5, "Fri")))
-    ly = top + 7 * (cell + gap) + 32
-    legend_x = w - 40 - 5 * (cell + gap) - 46
-    legend = (f'<text x="{legend_x - 10}" y="{ly + 13}" text-anchor="end" class="mono" font-size="12" fill="{DIM}">Less</text>'
-              + "".join(f'<rect x="{legend_x + i * (cell + gap)}" y="{ly}" width="{cell}" height="{cell}" rx="4" fill="{c}"/>'
-                        for i, c in enumerate(LEVEL_COLORS))
-              + f'<text x="{legend_x + 5 * (cell + gap) + 6}" y="{ly + 13}" class="mono" font-size="12" fill="{DIM}">More</text>')
-    caption_text = caption_text or f"contributions in the last year · {ACCOUNTS_LABEL}"
-    caption = (f'<text x="{left}" y="{ly + 13}" class="mono" font-size="13" fill="{MUTED}">'
-               f'<tspan fill="{TEXT}" font-weight="700">{total:,}</tspan> {esc(caption_text)}</text>')
-    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>
-{''.join(months)}{labels}
-{''.join(rects)}
-{caption}{legend}"""
-    write_svg(name, body, w, h, f"{total} {caption_text}")
+    weeks = (len(days) + offset + 6) // 7
+    return "".join(out), weeks * (cell + gap) - gap, 7 * (cell + gap) - gap
 
 
-def stat_cells(stats, w, h, cols, num_size, label_size):
-    rows = (len(stats) + cols - 1) // cols
-    cw, rh = w / cols, (h - 70) / rows
-    out = []
+def card(name, days, stats, w, cell, gap, stat_cols, num_size, label_size, caption):
+    pad = 36
+    nonzero = sorted(n for _, n in days if n)
+    cuts = [nonzero[int(len(nonzero) * q)] for q in (0.25, 0.5, 0.75)] if nonzero else [1, 2, 3]
+
+    # stats block
+    rows = (len(stats) + stat_cols - 1) // stat_cols
+    cw = (w - 2 * pad) / stat_cols
+    row_h = num_size + label_size + 30
+    st = []
     for i, (num, label) in enumerate(stats):
-        cx = cw * (i % cols) + cw / 2
-        cy = 70 + rh * (i // cols) + rh / 2 + num_size * 0.15
-        out.append(f'<text x="{cx}" y="{cy}" text-anchor="middle" class="sans" font-size="{num_size}" font-weight="800" fill="url(#accent)">{esc(num)}</text>'
-                   f'<text x="{cx}" y="{cy + label_size * 2}" text-anchor="middle" class="mono" font-size="{label_size}" fill="{MUTED}" letter-spacing="1">{esc(label.upper())}</text>')
-    return "".join(out)
+        cx = pad + cw * (i % stat_cols)
+        y = 64 + (i // stat_cols) * row_h + num_size * 0.8
+        st.append(f'<text x="{cx}" y="{y}" class="sans" font-size="{num_size}" font-weight="800" fill="url(#accent)">{esc(num)}</text>'
+                  f'<text x="{cx}" y="{y + label_size + 12}" class="mono" font-size="{label_size}" fill="{MUTED}" letter-spacing="1">{esc(label.upper())}</text>')
+    grid_top = 64 + rows * row_h + 34
+    cells, gw, gh = grid(days, pad, grid_top, cell, gap, cuts)
+    h = grid_top + gh + 64
+
+    ly = h - 30
+    legend_x = w - pad - 5 * (cell * 0.8 + 4) - 40
+    legend = (f'<text x="{legend_x - 8}" y="{ly}" text-anchor="end" class="mono" font-size="{label_size}" fill="{DIM}">Less</text>'
+              + "".join(f'<rect x="{legend_x + i * (cell * 0.8 + 4)}" y="{ly - cell * 0.7}" width="{cell * 0.8}" height="{cell * 0.8}" rx="3" fill="{c}"/>'
+                        for i, c in enumerate(LEVEL_COLORS))
+              + f'<text x="{legend_x + 5 * (cell * 0.8 + 4) + 4}" y="{ly}" class="mono" font-size="{label_size}" fill="{DIM}">More</text>')
+    body = f"""<defs>{ACCENT_GRADIENT}</defs>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>
+<text x="{pad}" y="44" class="mono" font-size="{label_size + 1}" fill="{BLUE}" letter-spacing="1.5">{esc(caption)}</text>
+{''.join(st)}
+{cells}
+<text x="{pad}" y="{ly}" class="mono" font-size="{label_size}" fill="{DIM}">{esc(ACCOUNTS_LABEL)} · updated {dt.date.today().isoformat()}</text>
+{legend}"""
+    write_svg(name, body, w, h, f"{caption}: " + " · ".join(f"{n} {l}" for n, l in stats))
 
 
-def stats_card(stats, updated):
-    for name, w, h, cols, ns, ls, ts in (("stats.svg", 1280, 200, 4, 42, 13, 14),
-                                          ("stats-mobile.svg", 720, 380, 2, 54, 17, 18)):
-        body = f"""<defs>{ACCENT_GRADIENT}</defs>
-<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{SURFACE}" stroke="{BORDER}" stroke-width="1.5"/>
-<text x="36" y="46" class="mono" font-size="{ts}" fill="{BLUE}" letter-spacing="1.5">LAST 12 MONTHS</text>
-<text x="{w - 36}" y="46" text-anchor="end" class="mono" font-size="{ts - 2}" fill="{DIM}">updated {updated}</text>
-{stat_cells(stats, w, h, cols, ns, ls)}"""
-        write_svg(name, body, w, h, " · ".join(f"{n} {l}" for n, l in stats))
+def summary(days):
+    total = sum(n for _, n in days)
+    active = sum(1 for _, n in days if n)
+    longest, current = streaks(days)
+    return [(f"{total:,}", "Contributions"), (str(active), "Active days"),
+            (f"{longest}d", "Longest streak"), (f"{current}d", "Current streak")]
 
 
 def main():
     cal = combined_calendar()
     today = dt.date.today().isoformat()
-    days = sorted((d, n) for d, n in cal.items() if d <= today)[-371:]
-    total = sum(n for _, n in days[-365:])
-    active = sum(1 for _, n in days[-365:] if n)
-    longest, current = streaks(days[-365:])
-    stats = [(f"{total:,}", "Contributions"), (str(active), "Active days"),
-             (f"{longest}d", "Longest streak"), (f"{current}d", "Current streak")]
-    stats_card(stats, today)
-    heatmap(days, total)
-    recent = days[-182:]
-    while dt.date.fromisoformat(recent[0][0]).weekday() != 6:  # start on a Sunday
-        recent = recent[1:]
-    heatmap(recent, sum(n for _, n in recent), "contributions-mobile.svg", cell=22, gap=5,
-            caption_text="in the last 6 months")
+    days = sorted((d, n) for d, n in cal.items() if d <= today)
+    year = days[-364:]
+    card("activity.svg", year, summary(year), 1280, 18, 4, 4, 34, 12, "ACTIVITY · LAST 12 MONTHS")
+    half = days[-182:]
+    while dt.date.fromisoformat(half[0][0]).weekday() != 6:  # start on a Sunday
+        half = half[1:]
+    card("activity-mobile.svg", half, summary(half), 720, 21, 4, 2, 44, 15, "ACTIVITY · LAST 6 MONTHS")
 
 
 if __name__ == "__main__":

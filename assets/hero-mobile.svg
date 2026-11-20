@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" fill="none" role="img">
-<title>Milind Keni: Mobile &amp; Cross-Platform Engineering</title>
+<title>Milind Keni: Android &amp; Cross-Platform Engineering</title>
 <style>
   .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif; }
   .mono { font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace; }
@@ -29,7 +29,7 @@
 <text x="48" y="92" class="mono" font-size="19" fill="#38BDF8" letter-spacing="2">SENIOR SOFTWARE ENGINEER</text>
 <text x="48" y="122" class="mono" font-size="19" fill="#38BDF8" letter-spacing="2">@ WEBENGAGE</text>
 <text x="44" y="226" class="sans" font-size="88" font-weight="800" fill="#E5E7EB" letter-spacing="-3">Milind Keni</text>
-<text x="48" y="290" class="sans" font-size="38" font-weight="650" fill="url(#accent)">Mobile &amp; Cross-Platform</text>
+<text x="48" y="290" class="sans" font-size="38" font-weight="650" fill="url(#accent)">Android &amp; Cross-Platform</text>
 <text x="48" y="338" class="sans" font-size="38" font-weight="650" fill="url(#accent)">Engineering</text>
 <clipPath id="typeclip"><rect x="48" y="396" width="490.25" height="35.2">
     <animate attributeName="width" values="0;490.25" dur="2.2s" begin="0.3s" fill="freeze"/>
