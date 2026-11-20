@@ -6,7 +6,6 @@
   <a href="https://milindev.com/"><img src="https://img.shields.io/badge/milindev.com-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Website" /></a>
   <a href="https://www.linkedin.com/in/milindkeni"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=A78BFA" alt="LinkedIn" /></a>
   <a href="https://x.com/Mtweet7002"><img src="https://img.shields.io/badge/@Mtweet7002-0D1117?style=for-the-badge&logo=x&logoColor=E6EDF3" alt="X" /></a>
-  <img src="https://komarev.com/ghpvc/?username=mk7002&style=for-the-badge&color=0D1117&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
 
 <p align="center">
@@ -61,9 +60,9 @@ Customer-engagement SDKs I work on at **WebEngage** (2022–present), used in pr
 <p align="center">
   <a href="https://mocable.lokihomelab.in/"><img src="assets/card-mocable.svg" width="49%" alt="Mocable: self-hosted mock REST API service (live)" /></a>
   <a href="https://push.lokihomelab.in/"><img src="assets/card-notifynow.svg" width="49%" alt="Notify Now: FCM and APNs push testing tool (live)" /></a>
-  <a href="https://github.com/mk7002/face-gallery"><img src="assets/card-facegallery.svg" width="49%" alt="Face Gallery: offline gallery with on-device face grouping" /></a>
-  <a href="https://github.com/mk7002/chess-trainer"><img src="assets/card-chess.svg" width="49%" alt="Chess Trainer: bots 1–10 with a live coach" /></a>
-  <a href="https://github.com/mk7002/friday"><img src="assets/card-friday.svg" width="49%" alt="FRIDAY: macOS AI desktop assistant powered by Claude" /></a>
+  <img src="assets/card-facegallery.svg" width="49%" alt="Face Gallery: offline gallery with on-device face grouping" />
+  <img src="assets/card-chess.svg" width="49%" alt="Chess Trainer: bots 1–10 with a live coach" />
+  <a href="https://github.com/mk7002/aia"><img src="assets/card-friday.svg" width="49%" alt="FRIDAY: macOS AI desktop assistant powered by Claude" /></a>
   <a href="https://github.com/mk7002/apklab"><img src="assets/card-apklab.svg" width="49%" alt="APKLab: pull and push APKs to Android devices" /></a>
 </p>
 
@@ -94,11 +93,11 @@ Apps I built and shipped to the Play Store since 2024. **120K+ installs** in tot
 
 | Project | What it is | Stack |
 |---|---|---|
-| [**EnglishFlow**](https://github.com/mk7002/englishflow) | Learn English by reading: 27 graded stories, quizzes, word lookup, vocabulary practice and streaks | `Flutter` |
-| [**DueDash**](https://github.com/mk7002/duedash) | Bill and IOU reminders with recurring cycles, insights, app lock, home widget and Drive backup | `Flutter` |
-| [**DayForge**](https://github.com/mk7002/dayforge) | N-day habit challenges with reminders, charts and Drive backup | `Flutter` |
-| [**Parallel Life**](https://github.com/mk7002/parallel-life) | Explore decisions by sketching alternative paths, running small experiments and comparing scenarios | `Flutter` `Drift` |
-| [**App Builder**](https://github.com/mk7002/app-builder) | One Flutter codebase that renders any app from a JSON config, plus a web admin with a live preview | `Flutter` |
+| **EnglishFlow** | Learn English by reading: 27 graded stories, quizzes, word lookup, vocabulary practice and streaks | `Flutter` |
+| **DueDash** | Bill and IOU reminders with recurring cycles, insights, app lock, home widget and Drive backup | `Flutter` |
+| **DayForge** | N-day habit challenges with reminders, charts and Drive backup | `Flutter` |
+| **Parallel Life** | Explore decisions by sketching alternative paths, running small experiments and comparing scenarios | `Flutter` `Drift` |
+| **App Builder** | One Flutter codebase that renders any app from a JSON config, plus a web admin with a live preview | `Flutter` |
 | [**Android-Network-Connectivity**](https://github.com/mk7002/Android-Network-Connectivity) | Library that listens for internet connectivity changes | `Java` |
 
 </details>

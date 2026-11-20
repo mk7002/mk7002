@@ -167,11 +167,11 @@ CARDS = [
     ("facegallery", "03", "ANDROID · ON-DEVICE ML", "Face Gallery",
      "Offline gallery in the style of Google Photos, with on-device face grouping: ML Kit detection, "
      "5-point alignment and MobileFaceNet embeddings. 0% wrong faces on LFW.",
-     ["Kotlin", "Compose", "ML Kit", "LiteRT", "Room"], GREEN, "view source →"),
+     ["Kotlin", "Compose", "ML Kit", "LiteRT", "Room"], GREEN, "source coming soon"),
     ("chess", "04", "ANDROID · GAME ENGINE", "Chess Trainer",
      "Bots at levels 1–10 with a live coach: threats, the opponent's plan, hints and move grades. "
      "The chess engine is written from scratch. Glass and 3D board styles.",
-     ["Kotlin", "Compose", "Custom engine"], "#FBBF24", "view source →"),
+     ["Kotlin", "Compose", "Custom engine"], "#FBBF24", "source coming soon"),
     ("friday", "05", "DESKTOP · AI AGENT", "FRIDAY",
      "macOS AI desktop assistant powered by Claude. It edits files, runs builds and uses Git through "
      "a permissioned, audited tool layer, and keeps its memory in Markdown.",

@@ -26,5 +26,5 @@
 <text x="31" y="92" class="sans" font-size="30" font-weight="800" fill="#E6EDF3" letter-spacing="-0.5">Chess Trainer</text>
 <text x="32" y="132" class="sans" font-size="15" fill="#8B949E">Bots at levels 1–10 with a live coach: threats, the opponent's</text><text x="32" y="155" class="sans" font-size="15" fill="#8B949E">plan, hints and move grades. The chess engine is written from</text><text x="32" y="178" class="sans" font-size="15" fill="#8B949E">scratch. Glass and 3D board styles.</text>
 <rect x="32" y="202" width="67.6" height="26" rx="13" fill="#07090D" stroke="#1F2630"/><text x="65.8" y="219.5" text-anchor="middle" class="mono" font-size="12" fill="#C9D1D9">Kotlin</text><rect x="107.6" y="202" width="75.19999999999999" height="26" rx="13" fill="#07090D" stroke="#1F2630"/><text x="145.2" y="219.5" text-anchor="middle" class="mono" font-size="12" fill="#C9D1D9">Compose</text><rect x="190.79999999999998" y="202" width="120.8" height="26" rx="13" fill="#07090D" stroke="#1F2630"/><text x="251.2" y="219.5" text-anchor="middle" class="mono" font-size="12" fill="#C9D1D9">Custom engine</text>
-<text x="588" y="219.5" text-anchor="end" class="mono" font-size="12" fill="#FBBF24">view source →</text>
+<text x="588" y="219.5" text-anchor="end" class="mono" font-size="12" fill="#FBBF24">source coming soon</text>
 </svg>
