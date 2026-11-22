@@ -160,17 +160,6 @@ Outside work I build developer tools and offline-first apps. Lately I've been wo
 
 Apps I built and shipped to Google Play since 2024: **120K+ installs** in total.
 
-| App | Installs |
-|---|---:|
-| <img src="assets/apps/com.susha.KokanVadhuvar.png" width="44" height="44" align="left" alt="Kokan Vadhuvar icon" /> **[Kokan Vadhuvar](https://play.google.com/store/apps/details?id=com.susha.KokanVadhuvar)**<br><sub>Matrimony platform for the Konkan community, with verified profiles</sub> | **`100K+`** |
-| <img src="assets/apps/com.susha.MarathaMatrimony.png" width="44" height="44" align="left" alt="Maratha Sthal icon" /> **[Maratha Sthal](https://play.google.com/store/apps/details?id=com.susha.MarathaMatrimony)**<br><sub>Matrimony platform for the Maratha community</sub> | **`10K+`** |
-| <img src="assets/apps/com.susha.BuddhistMatrimony.png" width="44" height="44" align="left" alt="Buddhist Parinay icon" /> **[Buddhist Parinay](https://play.google.com/store/apps/details?id=com.susha.BuddhistMatrimony)**<br><sub>Matrimony platform for the Buddhist community</sub> | **`5K+`** |
-| <img src="assets/apps/com.susha.vadarvadhuvarflutter.png" width="44" height="44" align="left" alt="Vadar Vadhuvar icon" /> **[Vadar Vadhuvar](https://play.google.com/store/apps/details?id=com.susha.vadarvadhuvarflutter)**<br><sub>Matrimony platform for the Vadar community (Flutter)</sub> | **`5K+`** |
-| <img src="assets/apps/com.seqrtechnology.verify.png" width="44" height="44" align="left" alt="SeQr Verify icon" /> **[SeQr Verify](https://play.google.com/store/apps/details?id=com.seqrtechnology.verify)**<br><sub>Scan a product's code to check whether it's genuine or counterfeit</sub> | **`1K+`** |
-| <img src="assets/apps/com.lube.png" width="44" height="44" align="left" alt="LUBE Corporation icon" /> **[LUBE Corporation](https://play.google.com/store/apps/details?id=com.lube)**<br><sub>Product verification and catalog app for a lubrication-equipment maker</sub> | **`500+`** |
-| <img src="assets/apps/com.susha.SushaAssociate.png" width="44" height="44" align="left" alt="Susha Associate icon" /> **[Susha Associate](https://play.google.com/store/apps/details?id=com.susha.SushaAssociate)**<br><sub>Partner app where associates earn by referring matches</sub> | **`10+`** |
-
-<sub>Install counts as shown on Google Play. Published by <a href="https://play.google.com/store/apps/dev?id=6660512038571678305">Susha Branding Solutions</a> and <a href="https://play.google.com/store/apps/developer?id=SeQr+Technology">SeQr Technology</a>.</sub>
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/mk7002/mk7002/main/assets/section-projects-mobile.svg" />
