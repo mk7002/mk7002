@@ -184,6 +184,17 @@ A personal mock REST API platform. Define endpoints with any status, headers and
 
 <br>
 
+<a href="https://stocks.lokihomelab.in/"><img src="assets/screens/stocks-banner.jpg" width="100%" alt="StockSense India: candlestick chart with moving averages, support and resistance, a detected double bottom and a 30-session projection cone, next to an outlook gauge" /></a>
+
+### StockSense India
+An educational **stock-outlook dashboard for NSE and BSE**. It combines candlestick charts, moving averages, Bollinger bands, RSI and MACD, chart-pattern detection, support and resistance levels, and news-headline sentiment into a transparent, explainable outlook with a 30-session projection cone. It also saves predictions and checks them against real closing prices 5 and 10 sessions later, tracking calibration and which signals were right.
+
+`JavaScript` `PHP` `Lightweight Charts` `Technical analysis` &nbsp;·&nbsp; **[Live app ↗](https://stocks.lokihomelab.in/)**
+
+<sub>A learning project, not investment advice.</sub>
+
+<br>
+
 <a href="https://github.com/mk7002/apklab"><img src="assets/screens/apklab-banner.jpg" width="100%" alt="APK Lab: Pull APK and Push APK screens" /></a>
 
 ### APK Lab
@@ -198,10 +209,16 @@ An Android library that exposes internet connectivity as an **RxJava** stream: s
 
 `Java` `Android` `RxJava` &nbsp;·&nbsp; **[Repository ↗](https://github.com/mk7002/Android-Network-Connectivity)** · [JitPack](https://jitpack.io/#mk7002/Android-Network-Connectivity)
 
-### FRIDAY <sub>· in development</sub>
-A macOS desktop assistant that uses **Claude** as its reasoning engine. It does real engineering work (files, terminal, Git, builds, debugging) through a tool layer where every action is **schema-validated, permission-checked and logged**, and risky actions wait for approval. Its memory is readable Markdown.
+<a href="https://github.com/mk7002/aia/tree/develop"><img src="assets/screens/friday-banner.jpg" width="100%" alt="FRIDAY desktop app: sidebar with Dashboard, Daily, Challenges, Projects, Tasks, Routines, Memory, Memory chips and Skills, showing the built-in skills library" /></a>
 
-`Electron` `React` `TypeScript` `Claude API` &nbsp;·&nbsp; Source coming soon
+### FRIDAY <sub>· in development</sub>
+A macOS desktop assistant that uses **Claude** as its reasoning engine. It does real engineering work (files, terminal, Git, project creation, build and test loops, debugging) through a tool layer where every action is **schema-validated, permission-checked and logged**, and risky actions wait for approval.
+
+- **Memory** in readable Markdown, indexed with SQLite FTS5, plus portable *memory chips*: separate minds with their own personality, memory and skills.
+- **Skills, Shortcuts and Routines**: reusable workflows (debug a failing build, plan my day…), one-click multi-step shortcuts with triggers, and reminders.
+- **Daily standups and wrap-ups** written from real git commits, tasks and sessions; a task view showing each plan, tool output, file change and approval.
+
+`Electron` `React` `TypeScript` `Claude API` `SQLite` &nbsp;·&nbsp; **[Repository ↗](https://github.com/mk7002/aia/tree/develop)**
 
 ### Prompt Library
 A categorized, templated collection of AI prompts for coding, writing, image generation and productivity, with contribution rules. It can also serve as the prompt source for an **AI skill** (`SKILL.md`).
